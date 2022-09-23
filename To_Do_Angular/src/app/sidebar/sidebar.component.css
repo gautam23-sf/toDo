@@ -1,0 +1,54 @@
+p {
+    background-color:  olivedrab;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+li:hover {
+    color: darkred;
+    font-weight: bolder;
+  }
+  
+li {
+    background-color:  olivedrab;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    list-style: none;
+  }
+.deleteCategory {
+  border-radius: 50%;
+  background-color: darkred;
+}
+
+.category{
+  background-color: olivedrab;
+  padding: 2px;
+}
+
+.sidebar_container {
+  display: flex;
+  background-color: olivedrab;
+ padding-left: 20px;
+ 
+}
+.editbtnimg {
+  background: url(../../assets/images/edit.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center center;
+  width: 25px;
+  height: 25px;
+}
+
+.deletebtnimg {
+  background: url(../../assets/images/delete.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center center;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}

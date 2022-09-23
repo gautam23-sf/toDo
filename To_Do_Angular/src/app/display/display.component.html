@@ -1,0 +1,19 @@
+<div class="todoHeading" >
+<h3 *ngIf= "categoryName == ' ' ? false : true" >{{"To-Do List - " +  categoryName}}</h3>
+</div>
+
+<div class="chkbox_container"
+    *ngFor="let todo_item of toDo_list_details; index as i">
+        
+    <input type="checkbox" [id]=todo_item.todo_id  #checkEle 
+        [(ngModel)] = todo_item.todo_check_status
+        (click)= onChecked(checkEle,itemref)> 
+    <label [for]=todo_item.todo_id #itemref 
+        [ngStyle]="{'text-decoration': todo_item.todo_check_status === true ? 'line-through' : ' '}">
+        {{ todo_item.todo_desc }}
+    </label>
+
+    <button type="button" title="Edit" class="editbtnimg" (click) = editToDoItem(checkEle) ></button>
+    <button type="button" title="Delete" class="deletebtnimg" (click) = deleteToDoItem(checkEle)></button>
+
+</div>

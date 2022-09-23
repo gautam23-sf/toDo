@@ -1,0 +1,29 @@
+<p>
+   
+    CATEGORY
+    <a 
+        class = "category">
+        <img src="../../assets/images/add1.jpeg" 
+        height="30px" 
+        width="30px" 
+        id="create_category_list"  
+        title="Press to Add New Category"
+        routerLink="./"
+        (click)="onbackToHomePage()">
+    </a> 
+    <br>
+    <a 
+    class = "category">
+    <img src="../../assets/images/delete.png" 
+    height="30px" 
+    width="30px" 
+    id="master_reset"  
+    title="Master Reset"
+    routerLink="./"
+    (click)="onMasterReset()">
+</a> 
+</p>
+
+<li #selectedCategory *ngFor="let category of categoryList" [id] = category.cat_id  routerLink="To_Do_List" (click) = "displayCategoryToDo(selectedCategory)"> 
+    {{ category.cat_desc }}
+</li>

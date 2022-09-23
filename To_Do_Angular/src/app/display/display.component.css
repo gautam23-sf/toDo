@@ -1,0 +1,46 @@
+h3 {
+    font-weight: normal;
+    background-color: olivedrab;
+    text-align: center;
+    text-decoration: underline;
+    color: #000;
+  }
+
+  .chkbox_container {
+    display: flex;
+    background-color: olivedrab;
+   padding-left: 20px;
+   
+  }
+  .chkbox_container input {
+    background-color: olivedrab;
+    margin-right: 10px;
+  }
+  
+  .chkbox_container label {
+    background-color: olivedrab;
+    width: 1000px;
+    font-size: medium;
+    color: darkred;
+    font-weight: bold;
+   
+  }
+  
+  .editbtnimg {
+    background: url(../../assets/images/edit.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .deletebtnimg {
+    background: url(../../assets/images/delete.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center center;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+  }

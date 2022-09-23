@@ -1,0 +1,84 @@
+
+<form  id="form" (ngSubmit)="onSubmit()" #f="ngForm">
+            
+    <div id="input_category" class="input"
+    *ngIf="!userinputToDoList">
+        <label                                      
+            for="category_list_items">
+            Category List Item
+        </label>
+      
+        <input 
+            type="text" 
+            id="category_list_items" 
+            name="category_list_items" 
+            placeholder="Enter Category item..." 
+            autocomplete="off"  
+            title="Enter the category item"
+            ngModel
+            required
+            [autofocus]="focusOnInputElement"
+        >
+       
+        <button 
+            id="category_submit" 
+            class="userinput_submit" 
+            value="submit"
+            [disabled]="!f.valid"
+            >
+            ADD
+        </button>                
+              
+    </div>  
+
+    <div 
+    id="input_toDo" 
+    class = "input" 
+    *ngIf="userinputToDoList">
+        <label 
+            for="toDo_list_items">
+            To Do List Item</label>
+        <input 
+            type="text" 
+            id="toDo_list_items" 
+            name="toDo_list_items" 
+            placeholder="Enter To Do list item..." 
+            autocomplete="off" 
+            title="Enter the To Do list item"
+            [(ngModel)] = editInputText
+            required
+            [autofocus]="focusOnInputElement"
+            #todoInputRef
+            >
+        <button 
+            id="toDo_submit" 
+            class="userinput_submit" 
+            value="Submit" 
+            name="toDo_submit"
+            [disabled]="!f.valid"
+            *ngIf="!updateToDoListItemsBtn"
+            >
+            ADD
+        </button> 
+        <button  
+            id = "editBtn_update"
+            class="userinput_submit" 
+            value="Submit"
+            name="editBtn_update"
+            [disabled]="!f.valid"
+            *ngIf="updateToDoListItemsBtn"
+            (click) = "onUpdate(editInputText)">
+            UPDATE
+        </button>  
+
+        <button 
+            id="toDo_reset" 
+            class="userinput_submit" 
+            value="Reset" 
+            *ngIf="resetStatus"
+            (click)="onReset()">
+            RESET
+        </button>                
+
+    </div>
+</form>
